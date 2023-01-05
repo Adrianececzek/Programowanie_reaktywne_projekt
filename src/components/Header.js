@@ -1,5 +1,6 @@
 import React from "react"
 import "./Header.css"
+import Login from "./Login"
 import { Link } from "react-router-dom"
 
 const Header = () => {
@@ -17,8 +18,10 @@ const Header = () => {
                 </ul>
             </div>
             <div className="header_right">
-                <button className="Logowanie">LogIn</button>
-                <button className="Logowanie">SignUp</button>
+                <ul className="list">
+                <li><a href="/Login">Login</a></li>
+                <li><a href="/Register">SignUp</a></li>
+                </ul>
             </div>
             <div className="header right">
 

@@ -1,14 +1,18 @@
 import React from "react";
+import Header from "./Header";
+import Middle from "./Middle";
+import Footer from "./Footer";
 
-const Home = () => {
-   return <div className="jumbotron jumbotron-fluid">
-       <div className="container">
-           <h1 className="display-4">Home</h1>
-           <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, aut autem delectus ea
-               error esse est eveniet expedita fugiat illo libero magni maxime mollitia optio quasi ratione rem
-               repellendus sunt.</p>
-       </div>
-   </div>;
-};
+function Home() {
+    return (
+        <>
+
+                <Header></Header>
+                <Middle></Middle>
+                <Footer></Footer>
+
+        </>
+    );
+}
 
 export default Home;

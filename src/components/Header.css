@@ -5,7 +5,7 @@
     align-items: center;
     justify-self: space-between;
     padding: 0.5rem calc((100vw - 1200px) / 2);
-    z-index: 10;;
+    z-index: 10;
     background-color: rgb(184, 124, 149);
     
 }

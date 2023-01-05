@@ -8,3 +8,13 @@
     font-weight: bold;
 }
 
+.gora {
+    top: 200px,
+}
+
+.srodek {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    left: 10%;
+}

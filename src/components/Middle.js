@@ -7,6 +7,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 
 const Middle = () => {
     return (
+      <div className="srodek">
         
         <CardGroup>
       <Card>
@@ -70,6 +71,7 @@ const Middle = () => {
         </Card.Footer>
       </Card>
     </CardGroup>
+    </div>
     )
 }
 

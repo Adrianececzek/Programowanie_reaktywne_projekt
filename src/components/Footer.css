@@ -1,13 +1,12 @@
 .footer {
-    font-size: 20px;
-    font-family: italic;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin-top: 20px;
-    justify-self: space-between;
-    background-color: rgb(184, 124, 149);
+    display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: #222831;
+	padding: 10px 10px;
+	font-size: 1.2rem;
+	text-align: center;
+	color: #eeeeee;
 }
 
 .footer > h4 {

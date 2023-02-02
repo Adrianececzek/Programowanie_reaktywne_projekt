@@ -6,9 +6,9 @@ import { Link } from "react-router-dom"
 const Footer = () => {
     return (
         <div className="footer">
-            <footer id="sticky-footer" className="flex-shrink-0 py-4 bg-dark text-white-50">
+            <footer id="sticky-footer">
                     <div className="container text-center">
-                        <small>Copyright &copy; Adrian Ciochoń</small>
+                        <p>Copyright &copy; Adrian Ciochoń</p>
                     </div>
                 </footer>
         </div>

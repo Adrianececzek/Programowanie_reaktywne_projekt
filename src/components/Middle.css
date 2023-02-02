@@ -1,20 +1,38 @@
-.logo {
-    width: 100%;
-    height: 50%;
-
+.movie-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    background-color: rgba(232, 234, 237, 1);
+    padding: 20px 20px;
+    margin: 30px;
+    margin-top: 50px;
+    border-radius: 15px;
+    overflow: hidden;
 }
-.rating {
-    text-align: center;
+
+.movie-img {
+    max-width: 250px;
+    max-height: 285px;
+}
+
+.movie-card__text {
+    margin: 30px;
+}
+
+.rate-symbol {
+    color: black;
     font-weight: bold;
+    font-size: 1.6rem;
 }
 
-.gora {
-    top: 200px,
+.link {
+    color: #eee;
+    text-decoration: none;
+    transition: color .3s;
 }
 
-.srodek {
-    position: absolute;
-    top: 15%;
-    right: 10%;
-    left: 10%;
+.link:hover {
+    color: #00ADB5;
 }

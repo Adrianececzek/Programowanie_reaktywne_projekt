@@ -15,7 +15,8 @@ from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
-
+import Header from './Header';
+import Footer from './Footer';
 
 
 function Login() {
@@ -59,36 +60,38 @@ function Logowanie() {
 
 
   return (
+    
+    <div >
+       
+      <Header/>
+     
     <MDBContainer fluid>
-
-      <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
+        
+      
         <MDBCardBody>
           <MDBRow>
-            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
-
-              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Log In</p>
-
+            <MDBCol className='order-2 order-lg-1 d-flex flex-column align-items-center'>
+              <p style={{fontWeight:'bold'}}>Login</p>
               <div className="d-flex flex-row align-items-center mb-4 ">
-                <MDBIcon fas icon="user me-3" size='lg'/>
-                <MDBInput onChange={handleName} label='Login' id='form1' type='text' className='w-100'/>
+                <MDBIcon fas icon="user me-3" size=''/>
+                <MDBInput onChange={handleName} id='form1' type='text' className='w-100' placeholder='Login'/>
               </div>
-
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="envelope me-3" size='lg'/>
-                <MDBInput onChange={handlePassword} label='Hasło' id='form2' type='password'/>
+                <MDBInput onChange={handlePassword}  id='form2' type='password' placeholder='Hasło'/>
               </div>
-
               <button onClick={Logowanie} type="button" className="btn btn-danger">Login</button>
               <br></br>
-              <button onClick={Rejestracja} type="button" className="btn btn-danger">Register</button>
-
+              <button onClick={Rejestracja} type="button" className="btn btn-danger" style={{lineheight: '2.0'}}>Register</button>
             </MDBCol>
-
           </MDBRow>
         </MDBCardBody>
-      </MDBCard>
 
     </MDBContainer>
+    <div style={{position: 'absolute', bottom: '0', width: '100%'}}>
+    <Footer/>
+    </div>
+    </div>
   );
 }
 

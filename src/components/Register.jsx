@@ -16,6 +16,8 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import {AxiosError} from "axios";
 import { useState } from 'react';
+import Header from './Header';
+import Footer from './Footer';
 
 
 function Register() {
@@ -65,28 +67,27 @@ function Register() {
   
 
   return (
+    <div >
+      <Header/>
     <MDBContainer fluid>
 
-      <MDBCard className='text-black m-5' style={{borderRadius: '25px'}}>
         <MDBCardBody>
           <MDBRow>
-            <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
-
-              <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-
+            <MDBCol  className='order-2 order-lg-1 d-flex flex-column align-items-center' >
+            <p style={{fontWeight:'bold'}}>Register</p>
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="envelope me-3" size='lg'/>
-                <MDBInput onChange={handleImie} label='Imie' id='form2' type='name'/>
+                <MDBInput onChange={handleImie}  id='form2' type='name' placeholder='Imie'/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="lock me-3" size='lg'/>
-                <MDBInput onChange={handleEmail} label='Email' id='form3' type='email'/>
+                <MDBInput onChange={handleEmail} id='form3' type='email' placeholder='Email'/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4">
                 <MDBIcon fas icon="key me-3" size='lg'/>
-                <MDBInput onChange={handleFPassword} label='Hasło' id='form4' type='password'/>
+                <MDBInput onChange={handleFPassword}  id='form4' type='password' placeholder='Hasło'/>
               </div>
 
               
@@ -99,9 +100,12 @@ function Register() {
 
           </MDBRow>
         </MDBCardBody>
-      </MDBCard>
 
     </MDBContainer>
+    <div style={{position: 'absolute', bottom: '0', width: '100%'}}>
+    <Footer/>
+    </div>
+    </div>
   );
 }
 

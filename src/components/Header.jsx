@@ -65,19 +65,22 @@ const Header = (props) => {
                     width='120'
                     height='80' />
                 </Navbar.Brand>
+                <div>
+                <a href="/">Menu</a>
+                </div>
                 <div style={{display:'flex' ,justifyContent:'space-evenly'}}>
                         {(logged==='false') &&
                             <div style={{}}>
-                                <Button style={{position: 'absolute', left: 1200, bottom: 30}} onClick={login} variant={props.outline}>Login</Button>
-                                <Button style={{position: 'absolute', left: 1300, bottom: 30}} onClick={Register} variant={props.outline}>Register</Button>
+                                <Button style={{position: 'absolute', left: 1200, bottom: 30, backgroundColor: 'orange', borderColor: 'orange'}} onClick={login} variant={props.outline}>Login</Button>
+                                <Button style={{position: 'absolute', left: 1300, bottom: 30, backgroundColor: 'orange', borderColor: 'orange'}} onClick={Register} variant={props.outline}>Register</Button>
                             </div>
 
                         }
                         {(logged==='true') &&
                             <Nav>
-                                <Nav style={{fontWeight: 'bold', fontSize: 20, color: 'purple'}}>{imie}</Nav>
-                                <Button style={{position: 'absolute', left: 1300, bottom: 30}} onClick={Logout} variant={props.outline}>Logout</Button>
-                                <Button style={{position: 'absolute', left: 200, bottom: 30}} onClick={Add} variant={props.outline}>Add</Button>
+                                <Nav style={{position: 'absolute', left: -130, top: 32, fontWeight: 'bold', fontSize: 30, color: 'purple'}}>{imie}</Nav>
+                                <Button style={{position: 'absolute', left: 1300, bottom: 30, backgroundColor: 'orange', borderColor: 'orange'}} onClick={Logout} variant={props.outline}>Logout</Button>
+                                <Button style={{position: 'absolute', left: 1230, bottom: 30, backgroundColor: 'orange', borderColor: 'orange'}} onClick={Add} variant={props.outline}>Add</Button>
                                 </Nav>
                         }
                 </div>

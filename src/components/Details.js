@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useNavigate, useLocation} from 'react-router-dom';
 import Header from "./Header";
 import Footer from "./Footer";
+import { isExpired } from 'react-jwt';
+
 
 
 const Details = () => {
@@ -11,6 +13,13 @@ const Details = () => {
     const id = location.state.id;
     const URL = `https://at.usermd.net/api/movies/${id}`;
     const [movie, setMovie] = useState({});
+    const logged = localStorage.getItem('isLogged');
+
+    useEffect(()=>{
+        if(isExpired(localStorage.getItem('token'))){
+            localStorage.setItem('isLogged','false');
+        }
+    })
 
     useEffect(() => {
         axios.get(URL).then((response) => {
@@ -18,6 +27,23 @@ const Details = () => {
                 setMovie(movie);
         });
     }, []);
+
+    function Delete() {
+        if(!isExpired(localStorage.getItem('token'))){
+            axios({
+                method: 'delete',
+                url: 'https://at.usermd.net/api/movie/'+movie.id,
+            }).then((response) => {
+                console.log(response.data);
+                setMovie(response.data)
+            }).catch((error) => {
+                console.log(error);
+            });
+        }else{
+            alert.show('Sesja wygasła')
+        }
+        navigate('/');
+    }
 
     return (
         <>
@@ -33,6 +59,7 @@ const Details = () => {
                     <p>{movie.content}</p>
 
                 </div>
+                <button onClick={Delete} type="button" style={{backgroundColor: 'orange', borderColor: 'orange'}}>Delete</button>
             </div>
         </div>
             <Footer/>

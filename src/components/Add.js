@@ -87,11 +87,11 @@ const Add = () => {
 
                         <div className='login__form-btns'>
                             <Link to='/'>
-                                <button className='login__form-btn login__form-btn--register'>
-                                    Anuluj
+                                <button  style={{backgroundColor: 'orange', borderColor: 'orange'}} className='login__form-btn'>
+                                    Wróc
                                 </button>
                             </Link>
-                            <button type='submit' className='login__form-btn'>
+                            <button type='submit' className='login__form-btn' style={{backgroundColor: 'orange', borderColor: 'orange'}}>
                                 Dodaj
                             </button>
                         </div>

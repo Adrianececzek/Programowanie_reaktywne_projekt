@@ -47,7 +47,6 @@ function Logowanie() {
       }
   }).then((response) => {
       localStorage.setItem('token',response.data.token);
-      localStorage.setItem('loginId',response.data.userId);
       localStorage.setItem('login',imie);
       localStorage.setItem('isLogged','true');
       window.location.href='/';
